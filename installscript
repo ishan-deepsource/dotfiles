@@ -23,9 +23,6 @@ ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
 rm $HOME/.vim
 ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 
-# Symlink the Mackup config
-ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
-
 # Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
 cd ~/.oh-my-zsh/themes/
 git checkout d6a36b1 agnoster.zsh-theme
@@ -60,30 +57,13 @@ echo 'Install wget'
 echo '------------'
 brew install wget
 
-echo 'Install httpie'
-echo '--------------'
-brew install httpie
-
-echo 'Install ncdu'
-echo '------------'
-brew install ncdu
-
-echo 'Install hub'
-echo '-----------'
-brew install hub
-
 echo 'Install ack'
 echo '-----------'
 brew install ack
 
-echo 'Install doctl'
-echo '-------------'
-brew install doctl
-
-
-echo 'Install some nice quicklook plugins'
-echo '-----------------------------------'
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip  suspicious-package
+echo 'Install warp terminal'
+echo '---------------------'
+brew install --cask warp
 
 echo 'Install php'
 echo '-----------'
@@ -115,47 +95,14 @@ echo 'Install imagick'
 echo '---------------'
 pecl install imagick
 
-echo 'Install memcached'
-echo '-----------------'
-pecl install memcached
-
 echo 'Install xdebug'
 echo '--------------'
 pecl install xdebug
-
-echo 'Install redis'
-echo '-------------'
-pecl install redis
-
-echo 'Install laravel envoy'
-echo '---------------------'
-composer global require "laravel/envoy=~2.0"
-
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install laravel valet'
-echo '---------------------'
-composer global require laravel/valet
-valet install
 
 echo 'Install mysql'
 echo '-------------'
 brew install mysql
 brew services start mysql
-
-echo 'Install yarn'
-echo '------------'
-brew install yarn
-
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
-
-echo 'Install mackup'
-echo '--------------'
-brew install mackup
 
 echo 'Install zsh-autosuggestions'
 echo '---------------------------'
@@ -171,9 +118,7 @@ echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 echo '++++++++++++++++++++++++++++++'
 echo 'Some optional tidbits'
 
-echo '1. Make sure dropbox is running first. If you have not backed up via Mackup yet, then run `mackup backup` to symlink preferences for a wide collection of apps to your dropbox. If you already had a backup via mackup run `mackup restore` You'\''ll find more info on Mackup here: https://github.com/lra/mackup.'
-echo '2. Set some sensible os x defaults by running: $HOME/.dotfiles/macos/set-defaults.sh'
-echo '3. Make a .dotfiles-custom/shell/.aliases for your personal commands'
+echo '2. Make a .dotfiles-custom/shell/.aliases for your personal commands'
 
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
