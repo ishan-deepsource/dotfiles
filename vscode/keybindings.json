@@ -1,0 +1,13 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "command": "namespaceResolver.import",
+        "key": "cmd+u",
+        "when": "editorTextFocus"
+    },
+    {
+        "command": "namespaceResolver.expand",
+        "key": "cmd+e",
+        "when": "editorTextFocus"
+    }
+]
