@@ -7,7 +7,7 @@ It contains the installation of some basic tools, some handy aliases and functio
 You can install them by cloning the repository as `.dotfiles` in your home directory and running the bootstrap script.
 
 ```
-git clone git@github.com:freekmurze/dotfiles.git .dotfiles
+git clone git@github.com:ishan-deepsource/dotfiles.git .dotfiles
 cd .dotfiles
 ./bootstrap
 ```
