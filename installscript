@@ -17,12 +17,6 @@ git config --global core.excludesfile $HOME/.global-gitignore
 rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
-# Symlink vim prefs
-rm $HOME/.vimrc
-ln -s $HOME/.dotfiles/shell/.vimrc $HOME/.vimrc
-rm $HOME/.vim
-ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
-
 # Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
 cd ~/.oh-my-zsh/themes/
 git checkout d6a36b1 agnoster.zsh-theme
@@ -44,6 +38,13 @@ sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/freek/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo 'Install VS Code'
+echo '---------------'
+brew install --cask visual-studio-code
+# Symlink settings.json for VS Code
+rm $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s $HOME/.dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 echo 'Install node'
 echo '------------'
